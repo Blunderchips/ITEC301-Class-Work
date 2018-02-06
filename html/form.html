@@ -4,31 +4,36 @@
 <html itemscope="" itemtype="http://schema.org/WebPage">
     <head>
         <meta charset="UTF-8"/>
-        <!-- <meta name="description" content="Free Web tutorials"/> -->
-        <!-- <meta name="keywords" content="HTML,CSS,XML,JavaScript"/> -->
         <meta name="author" content="Matthew Van der Bijl"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <title>~ Form Example ~</title>
 
         <style type="text/css">
-			html {
-				margin-top: 5%;
-				margin-left: 10%;
-				margin-right:10%; 
-			}
+            html {
+                margin-top: 5%;
+                margin-left: 10%;
+                margin-right:10%; 
+            }
+			
+			th {
+				text-align: left;
+			} 
         </style>
     </head>
 
     <body lang="en-ZA">
         <div>
-			<hr/>
+            <hr/>
             <h1 align="center" title="~ Form Example ~">
                 Form Example
             </h1> <hr/> <br/> <br/>
 
             <form>
                 <table>
+					<tr>
+						<th>Infomation<th>
+					<tr>
                     <tr>
                         <td>Name:</td>
                         <td><input type="text" name="name" title="Please enter the name" placeholder="Name..." /></td>
@@ -45,19 +50,63 @@
                         <td>Height:</td>
                         <td><input type="text" name="height" title="Please enter the height" placeholder="Height..." /></td>
                     </tr>
-					
+
+                    <tr><td><br/></td></tr>
+
+                    <!-- Buttons -->
                     <tr>
-						<td>
-							<input type="button" name="submit" value="Submit" title="Submit" />
-						</td>
                         <td>
-							<input type="button" name="cancel" value="Cancel" title="Cancel" />
-						</td>
+                            <input type="button" name="submit" value="Submit" title="Submit" />
+                        </td>
+                        <td>
+                            <input type="button" name="cancel" value="Cancel" title="Cancel" />
+                        </td>
                     </tr>	
+
+                    <tr><td><br/></td></tr>
+
+                    <!-- Radio buttons -->
+					<tr>
+						<th>Gender<th>
+					<tr>
+                    <tr>
+                        <td><input type="radio" name="gender" value="male" /></td>
+                        <td>Male</td>
+                    <tr>
+                        <td><input type="radio" name="gender" value="female" /></td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="gender" value="other" /></td>
+                        <td>Other</td>
+                    </tr>
+
+                    <tr><td><br/></td></tr>
+
+                    <!-- Check Boxes -->
+                    <tr>
+						<th>Financial Status<th>
+					<tr>
+					<tr>
+                        <td>
+                            <input type="checkbox" name="money" />
+                        </td>
+                        <td>
+                            Money
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="no_money" />
+                        </td>
+                        <td>
+                            No Money
+                        </td>
+                    </tr>
                 </table>
             </form>
         </div>
-		
-		<br/><br/><br/> <hr/>
+
+        <br/><br/><br/> <hr/>
     </body>
 </html>
