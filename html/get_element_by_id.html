@@ -1,0 +1,40 @@
+<!-- 16/02/2018 -->
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Matthew Van der Bijl" />
+	
+		<title>~ Get element by ID ~</title>
+	</head>
+
+	<body lang="en-ZA">
+		<hr> <h1 align="center">
+			~ Get element by ID ~
+		</h1> <hr> <br>
+	
+		<form target="_self">
+			<input type="button" value="In line" title="In line" onClick="document.getElementById('p1').innerHTML = Date()" />
+			<input type="button" value="Function" title="Function" onClick="func()" />
+			<input type="button" value="Reset" title="Reset" onClick="reset_()" />
+		</form>
+	
+		<p id="p1">
+			This will change to the data by clicking the In line button.
+		<p/>
+		
+		<p id="p2">
+			This will change to the data by clicking the function button.
+		<p/>
+	</body>
+	
+	<script>
+		function func() {
+			document.getElementById('p2').innerHTML = Date()
+		}
+		
+		function reset_() {
+			document.getElementById('p1').innerHTML = 'This will change to the data by clicking the In line button.'
+			document.getElementById('p2').innerHTML =  'This will change to the data by clicking the function button.'
+		}
+	</script>
+</html>
