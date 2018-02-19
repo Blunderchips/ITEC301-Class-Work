@@ -1,0 +1,35 @@
+<!-- 19/02/2018 -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Matthew Van der Bijl (xq9x3wv31)">
+	
+		<title>~ JavaScript Adder ~</title>
+	</head>
+	
+	<body lang="en-ZA">
+		<h1 align="center">
+			~ JavaScript Adder ~
+		</h1> <hr>
+	
+		<form target="_self">
+			<input type="text" id="numA" /> <br>
+			<input type="text" id="numB" /> <br>
+			<input type="button" value="Add" onclick="add()" />
+		</form>
+	
+		<p id="answer">
+			Answer goes here
+		</p>
+	</body>
+	
+	<script>
+		function add(numA, numB) {
+			var numA = document.getElementById("numA").value;
+			var numB = document.getElementById("numB").value;
+		
+			document.getElementById("answer").innerHTML = numA + numB
+		}
+	</script>
+</html>
