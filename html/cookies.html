@@ -1,0 +1,58 @@
+<!-- Cookies example -->
+<!-- Matthew Van der Bijl (xq9x3vw31) -->
+<!-- 2018/04/23 -->
+<html>
+	<head>
+		<title>~ Cookies ~</title>
+	</head>
+	
+	<body lang="en-ZA">
+		<div align="center" style="margin: 5%;">
+			<hr>
+			<h1 title="Cookies!">~ Cookies ~</h1>
+			<hr><br>
+		
+			<form target="_self">
+				<input id="name" type="text" placeholder="Name..." />
+				<br><br>
+				<input type="submit" value="create" onclick="return create();">
+				<input type="submit" value="delete" onclick="return remove();">
+				<input type="submit" value="read" onclick="return read();">
+			</form>	
+		</div>
+	</body>
+	
+	<script>
+		function validate() {
+			var name = document.getElementById("name").value;
+			return name != "";
+		}
+		
+		function create() {
+			var name = document.getElementById("name").value;
+			if (name != "") {
+				var expires = new Date(Date.now() + (30 * 24 * 60 * 60 * 1000)).toGMTString();
+				document.cookie = "customer=" + name + "; expires=" + expires + ";";
+				
+				window.alert("Cookie will expire on " + expires);
+				console.log(document.cookie);
+			} else {
+				window.alert("Invalid input");
+			} 
+		}
+		
+		function remove() {
+			var name = document.getElementById("name").value;
+			if (name != "") {
+				var expires = new Date(Date.now() - (30 * 24 * 60 * 60 * 1000)).toGMTString();
+				document.cookie = "customer=" + name + "expires=" + expires + ";";
+				
+				window.alert("The cookie has been deleted.");
+			}
+		}
+		
+		function read() {
+			window.alert(document.cookie);
+		}
+	</script>
+<html>
